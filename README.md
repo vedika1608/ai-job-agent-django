@@ -1,23 +1,39 @@
-AI Job Agent Django Project (Full)
+# AI Job Agent Django Project (Full)
+
 This repository contains a full starter Django project implementing an agent-based job assistant.
 
-Quick start
-Create virtualenv and install: pip install -r requirements.txt
+## Quick start
 
-(Optional) Use MySQL:
+1. Create virtualenv and install:
+   pip install -r requirements.txt
 
-Configure .env and set USE_MYSQL=1
-Ensure mysqlclient and MySQL server are installed
-Run migrations: python manage.py migrate
+2. (Optional) Use MySQL:
+   - Configure .env and set USE_MYSQL=1
+   - Ensure mysqlclient and MySQL server are installed
 
-Create superuser: python manage.py createsuperuser
+3. Run migrations:
+   python manage.py migrate
 
-Run server: python manage.py runserver
+4. Create superuser:
+   python manage.py createsuperuser
 
-API endpoints
-GET /api/jobs/ - list jobs
-POST /api/agent/ - agent endpoint (see README for payloads)
-POST /api/jobs/create/ - create job (admin or programmatic)
-Payload example for agent: { "type": "job", "input": "python,django" }
+5. Run server:
+   python manage.py runserver
 
-For apply: { "type": "apply", "input": {"job_id": 1} }
+## API endpoints
+
+- GET /api/jobs/ - list jobs
+- POST /api/agent/ - agent endpoint (see README for payloads)
+- POST /api/jobs/create/ - create job (admin or programmatic)
+
+Payload example for agent:
+{
+  "type": "job",
+  "input": "python,django"
+}
+
+For apply:
+{
+  "type": "apply",
+  "input": {"job_id": 1}
+}
