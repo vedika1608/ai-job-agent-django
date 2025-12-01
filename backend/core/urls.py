@@ -1,0 +1,8 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('jobs/', views.jobs_list, name='jobs_list'),
+    path('agent/', views.agent_endpoint, name='agent_endpoint'),
+    path('jobs/create/', views.create_job, name='create_job'),
+]
